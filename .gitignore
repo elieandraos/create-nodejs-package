@@ -1,0 +1,11 @@
+# OSX
+.DS_Store
+
+# npm
+node_modules/
+
+# jest
+coverage/
+
+# dev
+.env
