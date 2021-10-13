@@ -7,9 +7,10 @@
 
 # npm
 node_modules/
+package-lock.json
 
 # jest
 coverage/
 
-# dev
-.env
+# release changelog
+CHANGELOG.md
