@@ -1,6 +1,7 @@
 /*
-- how to configure prettier: https://prettier.io/docs/en/configuration.html
-- list of prettier options: https://prettier.io/docs/en/options.html
+- How to configure prettier: https://prettier.io/docs/en/configuration.html
+- List of prettier options: https://prettier.io/docs/en/options.html
+- In case of a prettier & eslint rules conflict, use: https://github.com/prettier/eslint-plugin-prettier
  */
 
 module.exports = {

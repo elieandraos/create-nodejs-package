@@ -1,10 +1,10 @@
 /*
-- how to configure eslint: https://eslint.org/docs/user-guide/configuring/
-- list of es-lint rules: https://eslint.org/docs/rules/
+- How to configure eslint: https://eslint.org/docs/user-guide/configuring/
+- In case of a prettier & eslint rules conflict, use: https://github.com/prettier/eslint-plugin-prettier
  */
 
 module.exports = {
-    // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
+    // List of environments options: https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
     env: {
         browser: true,
         commonjs: true,
@@ -17,6 +17,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
     },
+    // List of es-lint rules: https://eslint.org/docs/rules/
     rules: {
         'array-callback-return': 'error',
         'no-duplicate-imports': 'warn',
