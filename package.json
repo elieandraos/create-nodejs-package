@@ -34,7 +34,9 @@
         "url": "https://github.com/elieandraos/create-nodejs-package/issues"
     },
     "homepage": "https://github.com/elieandraos/create-nodejs-package#readme",
-    "dependencies": {},
+    "dependencies": {
+        "dotenv": "^10.0.0"
+    },
     "devDependencies": {
         "eslint": "^8.0.0",
         "jest": "^27.2.5",
