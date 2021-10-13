@@ -4,15 +4,21 @@
  */
 
 module.exports = {
+    // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
     env: {
         browser: true,
         commonjs: true,
         es2021: true,
         node: true,
+        jest: true,
+        shelljs: true,
     },
     extends: 'eslint:recommended',
     parserOptions: {
-        ecmaVersion: 13,
+        ecmaVersion: 'latest',
     },
-    rules: {},
+    rules: {
+        'array-callback-return': 'error',
+        'no-duplicate-imports': 'warn',
+    },
 }
