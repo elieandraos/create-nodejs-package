@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import inquirer from 'inquirer'
 import { exists } from './../utils/fileSystem'
 import { isValidPackageName } from './../utils/package'
@@ -16,12 +17,16 @@ const askForPackageInfo = async () => {
             },
         },
         {
-            type: 'confirm',
-            name: 'override',
+            type: 'list',
+            name: 'overwriteExistingDirectory',
             prefix: '',
             message: (answers) => {
-                return `Target directory ${answers.packageName} is not empty. Remove existing files and continue?`
+                console.log(`Target directory ${chalk.cyan(answers.packageName)} is not empty.`)
             },
+            choices: [
+                { name: 'Overwrite', value: true },
+                { name: 'Cancel', value: false }
+            ],
             when: (answers) => {
                 return exists(answers.packageName)
             },
