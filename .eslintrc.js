@@ -19,7 +19,6 @@ module.exports = {
     },
     // List of es-lint rules: https://eslint.org/docs/rules/
     rules: {
-        'array-callback-return': 'error',
-        'no-duplicate-imports': 'warn',
+        'array-callback-return': 'error'
     },
 }
