@@ -4,4 +4,3 @@ export async function run() {
     let packageInfo = await askForPackageInfo()
     console.log(packageInfo)
 }
-

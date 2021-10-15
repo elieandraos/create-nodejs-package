@@ -4,6 +4,4 @@ const isValidPackageName = (packageName) => {
     )
 }
 
-export {
-    isValidPackageName
-}
+export { isValidPackageName }
