@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { prerequisitesCheck } = require('./../src/index')
+const { prerequisitesCheck } = require('./../index')
 
 const init = () => {
     console.log('cli in the process 🎉 🎉')

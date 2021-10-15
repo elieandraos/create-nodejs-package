@@ -16,9 +16,10 @@ module.exports = {
     extends: 'eslint:recommended',
     parserOptions: {
         ecmaVersion: 'latest',
+        sourceType: 'module',
     },
     // List of es-lint rules: https://eslint.org/docs/rules/
     rules: {
-        'array-callback-return': 'error'
+        'array-callback-return': 'error',
     },
 }
