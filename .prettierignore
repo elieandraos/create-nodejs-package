@@ -1,3 +1,6 @@
+# release changelog
+CHANGELOG.md
+
 # OSX
 .DS_Store
 
@@ -11,6 +14,3 @@ package-lock.json
 
 # jest
 coverage/
-
-# release changelog
-CHANGELOG.md
