@@ -6,6 +6,7 @@ import installDependencies from './tasks/installDependencies'
 
 export async function run() {
     let packageInfo = await askForPackageInfo()
+
     await createDirectory(packageInfo)
     await copyTemplate(packageInfo)
     await updatePackageJsonFile(packageInfo)

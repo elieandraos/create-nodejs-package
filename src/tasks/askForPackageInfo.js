@@ -1,3 +1,4 @@
+import path from 'path'
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import { exists } from './../utils/fileSystem'
@@ -31,8 +32,16 @@ const askForPackageInfo = async () => {
         },
     ]
 
-    const answers = await inquirer.prompt(questions)
-    return answers
+    let answers = await inquirer.prompt(questions)
+    let root = path.join(process.cwd(), answers.packageName)
+    let template = 'vanilla'
+    let templateDir = path.join(__dirname, `../templates/${template}`)
+
+    return {
+        ...answers,
+        root: root,
+        templateDir: templateDir
+    }
 }
 
 export default askForPackageInfo

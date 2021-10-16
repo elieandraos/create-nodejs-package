@@ -4,12 +4,9 @@ import { projectInstall } from 'pkg-install'
 
 const installDependencies = async (packageInfo) => {
     try {
-        const cwd = process.cwd()
-        const root = path.join(cwd, packageInfo.packageName)
-
         console.log(`Installing package dependencies...`)
         projectInstall({
-            cwd: root,
+            cwd: packageInfo.root,
         })
     }catch (e) {
         console.log(e)
