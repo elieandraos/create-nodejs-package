@@ -21,7 +21,8 @@ const askForPackageInfo = async () => {
             type: 'list',
             name: 'overwriteExistingDirectory',
             prefix: '',
-            message: 'A directory with the same name already exists. Do you wish to overwrite it?',
+            message:
+                'A directory with the same name already exists. Do you wish to overwrite it?',
             choices: [
                 { name: 'Overwrite', value: true },
                 { name: 'Cancel', value: false },
@@ -40,7 +41,7 @@ const askForPackageInfo = async () => {
     return {
         ...answers,
         root: root,
-        templateDir: templateDir
+        templateDir: templateDir,
     }
 }
 
