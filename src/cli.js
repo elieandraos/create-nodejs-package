@@ -1,8 +1,11 @@
 import askForPackageInfo from './tasks/askForPackageInfo'
+import createDirectory from './tasks/createDirectory'
+import copyTemplate from './tasks/copyTemplate'
 
 export async function run() {
     let packageInfo = await askForPackageInfo()
-    console.log(packageInfo)
+    await createDirectory(packageInfo)
+    await copyTemplate(packageInfo)
 }
 
 /**

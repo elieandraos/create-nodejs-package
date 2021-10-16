@@ -9,7 +9,7 @@ const askForPackageInfo = async () => {
             type: 'input',
             name: 'packageName',
             prefix: '',
-            message: 'Enter the package name:',
+            message: '\nEnter the package name:',
             validate: (value) => {
                 return isValidPackageName(value)
                     ? true
@@ -21,11 +21,13 @@ const askForPackageInfo = async () => {
             name: 'overwriteExistingDirectory',
             prefix: '',
             message: (answers) => {
-                console.log(`Target directory ${chalk.cyan(answers.packageName)} is not empty.`)
+                return `Target directory ${chalk.cyan(
+                    answers.packageName
+                )} is not empty. How do you want to proceed?`
             },
             choices: [
                 { name: 'Overwrite', value: true },
-                { name: 'Cancel', value: false }
+                { name: 'Cancel', value: false },
             ],
             when: (answers) => {
                 return exists(answers.packageName)
