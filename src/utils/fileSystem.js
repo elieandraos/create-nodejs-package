@@ -1,16 +1,16 @@
 import fs from 'fs'
 import path from 'path'
 
-const exists = (dir) => {
+const dirExists = (dir) => {
     return fs.existsSync(dir)
 }
 
-const empty = (dir) => {
+const emptyDir = (dir) => {
     for (const file of fs.readdirSync(dir)) {
         const abs = path.resolve(dir, file)
 
         if (fs.lstatSync(abs).isDirectory()) {
-            empty(abs)
+            emptyDir(abs)
             fs.rmdirSync(abs)
         } else {
             fs.unlinkSync(abs)
@@ -36,4 +36,4 @@ const copy = (src, dest) => {
     }
 }
 
-export { exists, empty, copy }
+export { dirExists, emptyDir, copy }

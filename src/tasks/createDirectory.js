@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { empty } from './../utils/fileSystem'
+import { emptyDir } from './../utils/fileSystem'
 import { abortWithMessage } from './../utils/console'
 
 const createDirectory = async (packageInfo) => {
@@ -12,7 +12,7 @@ const createDirectory = async (packageInfo) => {
         )
             fs.mkdirSync(packageInfo.root)
         else if (packageInfo.overwriteExistingDirectory === true)
-            empty(packageInfo.root)
+            emptyDir(packageInfo.root)
         else abortWithMessage('Operation cancelled')
     } catch (e) {
         abortWithMessage(`Something wrong happened\n${e}`)
