@@ -12,7 +12,11 @@ const updatePackageJsonFile = async (packageInfo) => {
             path.join(packageInfo.templateDir, `package.json`),
             JSON.stringify(pkg, null, 2)
         )
-        respondOk(`Updated package.json name property to ${chalk.cyan(packageInfo.packageName)}`)
+        respondOk(
+            `Updated package.json name property to ${chalk.cyan(
+                packageInfo.packageName
+            )}`
+        )
     } catch (e) {
         abortWithMessage(`Something wrong happened\n${e}`)
     }

@@ -5,7 +5,11 @@ import { abortWithMessage, respondOk } from './../utils/console'
 const copyTemplate = async (packageInfo) => {
     try {
         copy(packageInfo.templateDir, packageInfo.root)
-        respondOk(`Scaffolded package files and directories in ${chalk.cyan(packageInfo.root)}`)
+        respondOk(
+            `Scaffolded package files and directories in ${chalk.cyan(
+                packageInfo.root
+            )}`
+        )
     } catch (e) {
         abortWithMessage(`Something wrong happened\n${e}`)
     }

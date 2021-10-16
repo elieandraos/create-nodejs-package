@@ -1,26 +1,26 @@
 {
-  "name": "aa",
-  "version": "0.0.0",
-  "source": "src/index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "umd:main": "dist/index.umd.js",
-  "unpkg": "dist/index.modern.js",
-  "scripts": {
-    "info": "npm list -depth 0 && npm list -g --depth=0 && npm outdated || exit 0",
-    "build": "microbundle",
-    "test": "jest --verbose --coverage",
-    "lint": "npx eslint src --fix",
-    "format": "npx prettier --write ."
-  },
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^10.0.0"
-  },
-  "devDependencies": {
-    "microbundle": "^0.13.3",
-    "eslint": "^8.0.1",
-    "jest": "^27.2.5",
-    "prettier": "2.4.1"
-  }
+    "name": "aa",
+    "version": "0.0.0",
+    "source": "src/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "umd:main": "dist/index.umd.js",
+    "unpkg": "dist/index.modern.js",
+    "scripts": {
+        "info": "npm list -depth 0 && npm list -g --depth=0 && npm outdated || exit 0",
+        "build": "microbundle",
+        "test": "jest --verbose --coverage",
+        "lint": "npx eslint src --fix",
+        "format": "npx prettier --write ."
+    },
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^10.0.0"
+    },
+    "devDependencies": {
+        "microbundle": "^0.13.3",
+        "eslint": "^8.0.1",
+        "jest": "^27.2.5",
+        "prettier": "2.4.1"
+    }
 }
