@@ -3,14 +3,14 @@ import chalk from 'chalk'
 import { copy } from './../utils/fileSystem'
 
 const copyTemplate = async (packageInfo) => {
-    const cwd = process.cwd()
-    const root = path.join(cwd, packageInfo.packageName)
-    const template = 'vanilla'
-    const templateDir = path.join(__dirname, `../templates/${template}`)
-
     try {
-        console.log(`\nScaffolding project in ${chalk.green(root)}`)
+        const cwd = process.cwd()
+        const root = path.join(cwd, packageInfo.packageName)
+        const template = 'vanilla'
+        const templateDir = path.join(__dirname, `../templates/${template}`)
+
         copy(templateDir, root)
+        console.log(`\nScaffolded package files and directories in ${chalk.green(root)}`)
     } catch (e) {
         console.log(e)
         process.exit(1)

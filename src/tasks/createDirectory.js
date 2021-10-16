@@ -4,11 +4,11 @@ import chalk from 'chalk'
 import { empty } from './../utils/fileSystem'
 
 const createDirectory = async (packageInfo) => {
-    const cwd = process.cwd()
-    const root = path.join(cwd, packageInfo.packageName)
-
     try {
-        if (!packageInfo.overwriteExistingDirectory) fs.mkdirSync(root)
+        const cwd = process.cwd()
+        const root = path.join(cwd, packageInfo.packageName)
+
+        if (!packageInfo.hasOwnProperty('overwriteExistingDirectory')) fs.mkdirSync(root)
         else if (packageInfo.overwriteExistingDirectory === true) empty(root)
         else {
             console.log(chalk.red('✖ Operation cancelled'))

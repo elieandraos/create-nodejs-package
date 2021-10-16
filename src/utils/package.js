@@ -4,4 +4,13 @@ const isValidPackageName = (packageName) => {
     )
 }
 
-export { isValidPackageName }
+const toValidPackageName = (packageName) => {
+    return packageName
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/^[._]/, '')
+        .replace(/[^a-z0-9-~]+/g, '-')
+}
+
+export { isValidPackageName, toValidPackageName }
