@@ -3,8 +3,9 @@ import { respondOk, abortWithMessage } from './../utils/console'
 
 const installDependencies = async (packageInfo) => {
     try {
-        respondOk(`Installing package dependencies, please be patient...`)
-        projectInstall({
+        await respondOk(`Installing package dependencies...`)
+
+        await projectInstall({
             cwd: packageInfo.root,
         })
     } catch (e) {

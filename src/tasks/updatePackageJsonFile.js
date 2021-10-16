@@ -8,11 +8,13 @@ const updatePackageJsonFile = async (packageInfo) => {
     try {
         const pkg = require(path.join(packageInfo.root, `package.json`))
         pkg.name = toValidPackageName(packageInfo.packageName)
+
         fs.writeFileSync(
             path.join(packageInfo.templateDir, `package.json`),
             JSON.stringify(pkg, null, 2)
         )
-        respondOk(
+
+        await respondOk(
             `Updated package.json name property to ${chalk.cyan(
                 packageInfo.packageName
             )}`

@@ -4,7 +4,8 @@ const sleep = (ms) => {
     return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-const respondOk = (message) => {
+const respondOk = async (message) => {
+    await sleep(500)
     console.log(chalk.green(`✔ ${message}`))
 }
 

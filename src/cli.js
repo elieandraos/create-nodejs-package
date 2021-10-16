@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import askForPackageInfo from './tasks/askForPackageInfo'
 import createDirectory from './tasks/createDirectory'
 import copyTemplate from './tasks/copyTemplate'
@@ -11,6 +12,8 @@ export async function run() {
     await copyTemplate(packageInfo)
     await updatePackageJsonFile(packageInfo)
     await installDependencies(packageInfo)
+
+    console.log(chalk.bgGreen.white('\nDONE!\n'))
 }
 
 /**
