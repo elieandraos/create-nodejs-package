@@ -1,5 +1,3 @@
-import path from 'path'
-import chalk from 'chalk'
 import { projectInstall } from 'pkg-install'
 import { respondOk, abortWithMessage } from './../utils/console'
 

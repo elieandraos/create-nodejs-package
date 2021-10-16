@@ -1,11 +1,15 @@
 import fs from 'fs'
-import chalk from 'chalk'
 import { empty } from './../utils/fileSystem'
 import { abortWithMessage } from './../utils/console'
 
 const createDirectory = async (packageInfo) => {
     try {
-        if (!packageInfo.hasOwnProperty('overwriteExistingDirectory'))
+        if (
+            !Object.prototype.hasOwnProperty.call(
+                packageInfo,
+                'overwriteExistingDirectory'
+            )
+        )
             fs.mkdirSync(packageInfo.root)
         else if (packageInfo.overwriteExistingDirectory === true)
             empty(packageInfo.root)

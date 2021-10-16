@@ -1,5 +1,4 @@
 import path from 'path'
-import chalk from 'chalk'
 import inquirer from 'inquirer'
 import { exists } from './../utils/fileSystem'
 import { isValidPackageName } from './../utils/package'
