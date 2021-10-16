@@ -20,11 +20,7 @@ const askForPackageInfo = async () => {
             type: 'list',
             name: 'overwriteExistingDirectory',
             prefix: '',
-            message: (answers) => {
-                return `Target directory ${chalk.cyan(
-                    answers.packageName
-                )} is not empty. How do you want to proceed?`
-            },
+            message: 'A directory with the same name already exists. Do you wish to overwrite it?',
             choices: [
                 { name: 'Overwrite', value: true },
                 { name: 'Cancel', value: false },

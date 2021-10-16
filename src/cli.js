@@ -2,12 +2,14 @@ import askForPackageInfo from './tasks/askForPackageInfo'
 import createDirectory from './tasks/createDirectory'
 import copyTemplate from './tasks/copyTemplate'
 import updatePackageJsonFile from './tasks/updatePackageJsonFile'
+import installDependencies from './tasks/installDependencies'
 
 export async function run() {
     let packageInfo = await askForPackageInfo()
     await createDirectory(packageInfo)
     await copyTemplate(packageInfo)
     await updatePackageJsonFile(packageInfo)
+    await installDependencies(packageInfo)
 }
 
 /**
