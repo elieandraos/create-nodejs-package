@@ -1,5 +1,5 @@
 {
-    "name": "aa",
+    "name": "nodejs-package",
     "version": "0.0.0",
     "source": "src/index.js",
     "main": "dist/index.js",
