@@ -6,12 +6,9 @@
 module.exports = {
     // List of environments options: https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
     env: {
-        browser: true,
-        commonjs: true,
-        es2021: true,
         node: true,
+        es2021: true,
         jest: true,
-        shelljs: true,
     },
     extends: 'eslint:recommended',
     parserOptions: {
@@ -20,6 +17,9 @@ module.exports = {
     },
     // List of es-lint rules: https://eslint.org/docs/rules/
     rules: {
-        'array-callback-return': 'error',
+        'array-callback-return': 'warn',
+        'no-duplicate-imports': 'warn',
+        'no-template-curly-in-string': 'warn',
+        'no-unreachable-loop': 'warn',
     },
 }
