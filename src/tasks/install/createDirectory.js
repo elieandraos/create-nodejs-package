@@ -1,6 +1,6 @@
 import fs from 'fs'
-import { emptyDir } from './../utils/fileSystem'
-import { abortWithMessage } from './../utils/console'
+import { emptyDir } from '../../utils/fileSystem'
+import { abortWithMessage } from '../../utils/console'
 
 const createDirectory = async (packageInfo) => {
     try {

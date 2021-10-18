@@ -1,5 +1,5 @@
 import chalk from 'chalk'
-import * as worker from './tasks'
+import * as worker from './tasks/install'
 
 export async function run() {
     let packageInfo = await worker.askForPackageInfo()

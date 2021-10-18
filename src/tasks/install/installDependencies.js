@@ -1,5 +1,5 @@
 import { projectInstall } from 'pkg-install'
-import { respondOk, abortWithMessage } from './../utils/console'
+import { respondOk, abortWithMessage } from '../../utils/console'
 
 const installDependencies = async (packageInfo) => {
     try {

@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import chalk from 'chalk'
-import { toValidPackageName } from './../utils/package'
-import { respondOk, abortWithMessage } from './../utils/console'
+import { toValidPackageName } from '../../utils/package'
+import { respondOk, abortWithMessage } from '../../utils/console'
 
 const updatePackageJsonFile = async (packageInfo) => {
     try {

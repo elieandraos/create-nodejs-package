@@ -1,8 +1,9 @@
 import chalk from 'chalk'
-import { copy } from './../utils/fileSystem'
-import { abortWithMessage, respondOk } from './../utils/console'
+import { copy } from '../../utils/fileSystem'
+import { abortWithMessage, respondOk } from '../../utils/console'
 
 const copyTemplate = async (packageInfo) => {
+    console.log(packageInfo)
     try {
         copy(packageInfo.templateDir, packageInfo.root)
 

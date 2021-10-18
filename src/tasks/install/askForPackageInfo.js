@@ -1,7 +1,7 @@
 import path from 'path'
 import inquirer from 'inquirer'
-import { dirExists } from './../utils/fileSystem'
-import { isValidPackageName } from './../utils/package'
+import { dirExists } from '../../utils/fileSystem'
+import { isValidPackageName } from '../../utils/package'
 
 const askForPackageInfo = async () => {
     const questions = [
@@ -35,7 +35,7 @@ const askForPackageInfo = async () => {
     let answers = await inquirer.prompt(questions)
     let root = path.join(process.cwd(), answers.packageName)
     let template = 'vanilla'
-    let templateDir = path.join(__dirname, `../templates/${template}`)
+    let templateDir = path.join(__dirname, `../../templates/${template}`)
 
     return {
         ...answers,
