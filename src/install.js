@@ -11,12 +11,3 @@ export async function run() {
 
     console.log(chalk.bgGreen.white('\nDONE!\n'))
 }
-
-/**
- * Node env:
- * - understands commonJs only (require/module.exports)
- * - needs esm to use module import/export
- *
- * Browser env:
- *  - most bundlers support both commonJs and ESM are out of the box
- */
