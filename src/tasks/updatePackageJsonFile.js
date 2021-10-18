@@ -10,7 +10,7 @@ const updatePackageJsonFile = async (packageInfo) => {
         pkg.name = toValidPackageName(packageInfo.packageName)
 
         fs.writeFileSync(
-            path.join(packageInfo.templateDir, `package.json`),
+            path.join(packageInfo.root, `package.json`),
             JSON.stringify(pkg, null, 2)
         )
 
