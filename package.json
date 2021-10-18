@@ -22,7 +22,8 @@
         "info": "npm list -depth 0 && npm list -g --depth=0 && npm outdated || exit 0",
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
-        "format": "npx prettier --write ."
+        "format": "npx prettier --write .",
+        "release": "node -r esm src/release.js"
     },
     "repository": {
         "type": "git",
