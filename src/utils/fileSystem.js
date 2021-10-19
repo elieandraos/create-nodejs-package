@@ -36,4 +36,8 @@ const copy = (src, dest) => {
     }
 }
 
-export { dirExists, emptyDir, copy }
+const getRootDir = () => {
+    return path.join(__dirname, '../../')
+}
+
+export { dirExists, emptyDir, copy, getRootDir }
