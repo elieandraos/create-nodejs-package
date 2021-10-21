@@ -8,7 +8,7 @@ async function run() {
 
     // check pre-requisites
     await worker.checkIfGitIsInitialized()
-    //await worker.checkIfGitDirectoryIsClean()
+    await worker.checkIfGitDirectoryIsClean()
     await worker.checkIfEnvironmentVariablesAreSet()
     await worker.checkIfLocalBranchIsTheReleaseBranchConfigured()
     await worker.checkIfChangelogExists()
