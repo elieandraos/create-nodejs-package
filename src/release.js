@@ -8,7 +8,7 @@ async function run() {
 
     // check pre-requisites
     await worker.checkIfGitIsInitialized()
-    await worker.checkIfGitDirectoryIsClean()
+    //await worker.checkIfGitDirectoryIsClean()
     await worker.checkIfEnvironmentVariablesAreSet()
     await worker.checkIfLocalBranchIsTheReleaseBranchConfigured()
     await worker.checkIfChangelogExists()
@@ -18,7 +18,7 @@ async function run() {
     // release flow
     const releaseType = await worker.pickReleaseType()
     const version = await worker.bumpPackageVersion(releaseType)
-    // parse changelog
+    const releaseChangelog = await worker.parseChangelog(version)
     // create github tag
     // create github release
     // publish to npm

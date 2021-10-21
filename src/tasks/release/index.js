@@ -8,6 +8,7 @@ import {
 
 import pickReleaseType from './pickReleaseType'
 import bumpPackageVersion from './bumpPackageVersion'
+import parseChangelog from './parseChangelog'
 
 export {
     checkIfGitIsInitialized,
@@ -17,4 +18,5 @@ export {
     checkIfChangelogExists,
     pickReleaseType,
     bumpPackageVersion,
+    parseChangelog
 }
