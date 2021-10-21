@@ -1,11 +1,12 @@
 # Changelog
 
 ## v1.0.0
-### Features
--   :green_heart: compile with **microbundle**
--   :test_tube: setup testing with **jest**
--   :rotating_light: configure coding style with **eslint**
--   :lipstick: configure code format with **prettier**
--   :twisted_rightwards_arrows: support environment variables
--   :construction_worker: build & test ci gitHub action
--   :rocket: semantic version release script
+### Added
+A global cli command that scaffolds package files and configures it tools: 
+
+-   :green_heart: compiles with **microbundle**
+-   :test_tube: tests with **jest**
+-   :rotating_light: lints coding style with **eslint**
+-   :lipstick: prettifies code format with **prettier**
+-   :twisted_rightwards_arrows: supports environment variables
+-   :rocket: releases to gitHub and published to npm
