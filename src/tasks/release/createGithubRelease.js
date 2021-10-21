@@ -22,4 +22,4 @@ const createGithubRelease = async (version, body) => {
     }
 }
 
-export default createGithubTag
+export default createGithubRelease
