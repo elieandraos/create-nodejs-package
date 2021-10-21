@@ -87,5 +87,5 @@ export {
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
-    checkIfChangelogExists
+    checkIfChangelogExists,
 }

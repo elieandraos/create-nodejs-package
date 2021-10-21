@@ -4,7 +4,9 @@ import { getRootDir } from './../../utils/fileSystem'
 import { respondOk, abortWithMessage } from './../../utils/console'
 
 const resetVersionedFiles = async () => {
-    await execa('git', ['checkout', 'package.json', 'package-lock.json'], { cwd: getRootDir() })
+    await execa('git', ['checkout', 'package.json', 'package-lock.json'], {
+        cwd: getRootDir(),
+    })
 }
 const parseChangelog = async (version) => {
     try {
@@ -17,10 +19,11 @@ const parseChangelog = async (version) => {
                 `could not find ${version} changelog - update CHANGELOG.md file`
             )
         } else {
-            await respondOk(`parsed version ${version} release content from the changelog file`)
+            await respondOk(
+                `parsed version ${version} release content from the changelog file`
+            )
             return changelog.body
         }
-
     } catch (e) {
         resetVersionedFiles()
         abortWithMessage(e)

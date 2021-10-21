@@ -19,9 +19,11 @@ async function run() {
     const releaseType = await worker.pickReleaseType()
     const version = await worker.bumpPackageVersion(releaseType)
     const releaseChangelog = await worker.parseChangelog(version)
-    // create github tag
-    // create github release
-    // publish to npm
+    await worker.createGithubTag(version)
+    await worker.createGithubRelease(version, releaseChangelog)
+    await worker.publishToNpmRegistry(version)
+
+    console.log(chalk.bgGreen.white('\nDONE! 🎉\n'))
 }
 
 run()

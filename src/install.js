@@ -9,5 +9,5 @@ export async function run() {
     await worker.updatePackageJsonFile(packageInfo)
     await worker.installDependencies(packageInfo)
 
-    console.log(chalk.bgGreen.white('\nDONE!\n'))
+    console.log(chalk.bgGreen.white('\nDONE! 🎉\n'))
 }

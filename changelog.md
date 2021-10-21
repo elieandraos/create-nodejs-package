@@ -1,8 +1,7 @@
 # Changelog
 
-## v0.0.1
+## v1.0.0
 ### Features
-
 -   :green_heart: compile with **microbundle**
 -   :test_tube: setup testing with **jest**
 -   :rotating_light: configure coding style with **eslint**
