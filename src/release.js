@@ -17,6 +17,7 @@ async function run() {
     // release flow
     const releaseType = await worker.pickReleaseType()
     const version = await worker.bumpPackageVersion(releaseType)
+    console.log(version)
 }
 
 run()

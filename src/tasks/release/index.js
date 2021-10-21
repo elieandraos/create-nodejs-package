@@ -14,5 +14,5 @@ export {
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
     pickReleaseType,
-    bumpPackageVersion
+    bumpPackageVersion,
 }

@@ -1,7 +1,4 @@
-import path from 'path'
 import inquirer from 'inquirer'
-import { dirExists } from '../../utils/fileSystem'
-import { isValidPackageName } from '../../utils/package'
 
 const pickReleaseType = async () => {
     const questions = [
@@ -10,12 +7,15 @@ const pickReleaseType = async () => {
             name: 'releaseType',
             prefix: '',
             message: 'Pick a semantic release type:',
-            // @todo: support prepatch, preminor, premajor and prerelease types
             choices: [
                 { name: 'patch', value: 'patch' },
                 { name: 'minor', value: 'minor' },
-                { name: 'major', value: 'major' }
-            ]
+                { name: 'major', value: 'major' },
+                { name: 'prepatch', value: 'prepatch' },
+                { name: 'preminor', value: 'preminor' },
+                { name: 'premajor', value: 'premajor' },
+                { name: 'prerelease', value: 'prerelease' },
+            ],
         },
     ]
 
