@@ -1,6 +1,6 @@
 {
     "name": "@elieandraos/create-nodejs-package",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "A cli tool that scaffolds and configures everything you need to develop nodeJs packages and publish them to NPM registry",
     "keywords": [
         "cli",
