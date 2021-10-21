@@ -72,9 +72,20 @@ const checkIfLocalBranchIsTheReleaseBranchConfigured = async () => {
     }
 }
 
+const checkIfChangelogExists = async () => {
+    try {
+        dirExists(`${getRootDir()}changelog.md`)
+            ? await respondOk('changelog.md exists')
+            : abortWithMessage(`changelog.md is missing`)
+    } catch (e) {
+        abortWithMessage(e)
+    }
+}
+
 export {
     checkIfGitIsInitialized,
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
+    checkIfChangelogExists
 }

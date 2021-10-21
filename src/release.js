@@ -11,13 +11,17 @@ async function run() {
     await worker.checkIfGitDirectoryIsClean()
     await worker.checkIfEnvironmentVariablesAreSet()
     await worker.checkIfLocalBranchIsTheReleaseBranchConfigured()
+    await worker.checkIfChangelogExists()
 
     console.log(chalk.magenta('\nStarting the release flow:\n'))
 
     // release flow
     const releaseType = await worker.pickReleaseType()
     const version = await worker.bumpPackageVersion(releaseType)
-    console.log(version)
+    // parse changelog
+    // create github tag
+    // create github release
+    // publish to npm
 }
 
 run()

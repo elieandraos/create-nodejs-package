@@ -3,6 +3,7 @@ import {
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
+    checkIfChangelogExists
 } from './preRequisites'
 
 import pickReleaseType from './pickReleaseType'
@@ -13,6 +14,7 @@ export {
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
+    checkIfChangelogExists,
     pickReleaseType,
     bumpPackageVersion,
 }
