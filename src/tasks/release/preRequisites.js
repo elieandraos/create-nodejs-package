@@ -54,8 +54,23 @@ const checkIfEnvironmentVariablesAreSet = async () => {
     }
 }
 
+const checkIfLocalBranchIsTheReleaseBranchConfigured = async () => {
+    try {
+        const { stdout } = await execa('git', ['branch', '--show-current'], {
+            cwd: getRootDir(),
+        })
+
+        stdout !== process.env.RELEASE_BRANCH
+            ? abortWithMessage('Your current local branch is different than the one configrued in your .env file')
+            : await respondOk('local branch is the same as the one configrued in your .env file')
+    } catch (e) {
+        abortWithMessage(e)
+    }
+}
+
 export {
     checkIfGitIsInitialized,
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
+    checkIfLocalBranchIsTheReleaseBranchConfigured
 }
