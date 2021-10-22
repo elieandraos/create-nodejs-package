@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.1
+### Added
+- :bulb: documentation files
+- :rocket: a release script to the scaffolded package
+
 ## v1.0.0
 ### Added
 A global cli command that scaffolds package files and configures it tools: 
@@ -9,4 +14,4 @@ A global cli command that scaffolds package files and configures it tools:
 -   :rotating_light: lints coding style with **eslint**
 -   :lipstick: prettifies code format with **prettier**
 -   :twisted_rightwards_arrows: supports environment variables
--   :rocket: releases to gitHub and published to npm
+-   :rocket: releases to gitHub and publishes to npm
