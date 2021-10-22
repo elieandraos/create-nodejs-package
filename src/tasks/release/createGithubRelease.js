@@ -1,4 +1,4 @@
-import { Octokit } from "@octokit/core"
+import { Octokit } from '@octokit/core'
 import { getRootDir } from './../../utils/fileSystem'
 import { respondOk, abortWithMessage } from './../../utils/console'
 

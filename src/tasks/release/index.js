@@ -24,5 +24,5 @@ export {
     parseChangelog,
     createGithubTag,
     createGithubRelease,
-    publishToNpmRegistry
+    publishToNpmRegistry,
 }
