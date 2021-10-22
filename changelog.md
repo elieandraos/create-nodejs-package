@@ -2,8 +2,8 @@
 
 ## v1.0.1
 ### Added
-- :bulb: documentation files
-- :rocket: a release script to the scaffolded package
+- :bulb: documentation and readme files
+- :rocket: release script to the scaffolded package template
 
 ## v1.0.0
 ### Added
