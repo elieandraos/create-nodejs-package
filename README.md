@@ -48,7 +48,7 @@ You can customize both of them to your personal flavor.
 -   :arrow_up: push `package.json` file
 -   :bookmark: create a gitHub tag
 -   :loud_sound: create a gitHub release with the version's changelog as release body
--   :rocket: publish the package to npm
+-   :rocket: publish the package to npm registry
 
 #### Configuration:
 
