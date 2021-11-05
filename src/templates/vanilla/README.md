@@ -44,7 +44,7 @@ You can customize both of them to your personal flavor.
 > This is a one time configuration only.
 
 1. Create gitHub [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `repo` scope
-3. Fill the environment variables _(gitHub token, branch, username, repo)_ in the `.env` file including the gitHub token just created
+2. Fill the environment variables _(gitHub token, branch, username, repo)_ in the `.env` file including the gitHub token just created
 
 #### Release
 
@@ -56,12 +56,12 @@ npm run release
 
 The script will perform few pre-requisites checks and will render an error help message if any fails:
 
-- check if git is initialized
-- check if you are logged in to npm (via cli)
-- check if the working directory is clean (no changes to commit and push)
-- check if all the .env variables are filled
-- check if the working branch is as configured in .env
-- check if the version's release notes exist in changelog.md (see how to create release notes below)
+-   check if git is initialized
+-   check if you are logged in to npm (via cli)
+-   check if the working directory is clean (no changes to commit and push)
+-   check if all the .env variables are filled
+-   check if the working branch is as configured in .env
+-   check if the version's release notes exist in changelog.md (see how to create release notes below)
 
 If all the pre-requisites checks pass, it will ask for the semantic version and start the release process.
 
