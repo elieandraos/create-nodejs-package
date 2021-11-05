@@ -4,6 +4,7 @@
 ### Added
 - :bulb: documentation and readme files
 - :rocket: release script to the scaffolded package template
+- :package: update jest and es-lint dependencies
 
 ## v1.0.0
 ### Added
