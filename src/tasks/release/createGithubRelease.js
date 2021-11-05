@@ -1,5 +1,4 @@
 import { Octokit } from '@octokit/core'
-import { getRootDir } from './../../utils/fileSystem'
 import { respondOk, abortWithMessage } from './../../utils/console'
 
 const createGithubRelease = async (version, body) => {
