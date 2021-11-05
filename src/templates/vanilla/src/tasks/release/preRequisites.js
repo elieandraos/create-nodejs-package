@@ -13,6 +13,18 @@ const checkIfGitIsInitialized = async () => {
     }
 }
 
+const checkIfLoggedInToNpm = async () => {
+    try {
+        const { stdout } = await execa('npm', ['whoami'], {
+            cwd: getRootDir(),
+        })
+
+        await respondOk(`logged in to npm registry as ${stdout}`)
+    } catch (e) {
+        abortWithMessage('You are not logged in to npm. run "npm login"')
+    }
+}
+
 const checkIfGitDirectoryIsClean = async () => {
     try {
         const { stdout } = await execa('git', ['diff', '--stat'], {
@@ -31,7 +43,6 @@ const checkIfEnvironmentVariablesAreSet = async () => {
     try {
         let vars = [
             'GITHUB_PERSONAL_ACCESS_TOKEN',
-            'NPM_TOKEN',
             'RELEASE_BRANCH',
             'REPO_OWNER',
             'REPO_NAME',
@@ -84,6 +95,7 @@ const checkIfChangelogExists = async () => {
 
 export {
     checkIfGitIsInitialized,
+    checkIfLoggedInToNpm,
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,

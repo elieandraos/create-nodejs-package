@@ -1,5 +1,6 @@
 import {
     checkIfGitIsInitialized,
+    checkIfLoggedInToNpm,
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
@@ -15,6 +16,7 @@ import publishToNpmRegistry from './publishToNpmRegistry'
 
 export {
     checkIfGitIsInitialized,
+    checkIfLoggedInToNpm,
     checkIfGitDirectoryIsClean,
     checkIfEnvironmentVariablesAreSet,
     checkIfLocalBranchIsTheReleaseBranchConfigured,
@@ -24,5 +26,5 @@ export {
     parseChangelog,
     createGithubTag,
     createGithubRelease,
-    publishToNpmRegistry,
+    publishToNpmRegistry
 }
