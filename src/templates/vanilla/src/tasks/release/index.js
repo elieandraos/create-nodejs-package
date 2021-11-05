@@ -1,0 +1,28 @@
+import {
+    checkIfGitIsInitialized,
+    checkIfGitDirectoryIsClean,
+    checkIfEnvironmentVariablesAreSet,
+    checkIfLocalBranchIsTheReleaseBranchConfigured,
+    checkIfChangelogExists,
+} from './preRequisites'
+
+import pickReleaseType from './pickReleaseType'
+import bumpPackageVersion from './bumpPackageVersion'
+import parseChangelog from './parseChangelog'
+import createGithubTag from './createGithubTag'
+import createGithubRelease from './createGithubRelease'
+import publishToNpmRegistry from './publishToNpmRegistry'
+
+export {
+    checkIfGitIsInitialized,
+    checkIfGitDirectoryIsClean,
+    checkIfEnvironmentVariablesAreSet,
+    checkIfLocalBranchIsTheReleaseBranchConfigured,
+    checkIfChangelogExists,
+    pickReleaseType,
+    bumpPackageVersion,
+    parseChangelog,
+    createGithubTag,
+    createGithubRelease,
+    publishToNpmRegistry,
+}
