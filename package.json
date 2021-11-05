@@ -46,8 +46,8 @@
         "pkg-install": "^1.0.0"
     },
     "devDependencies": {
-        "eslint": "^8.0.1",
-        "jest": "^27.2.5",
+        "eslint": "^8.1.0",
+        "jest": "^27.3.1",
         "prettier": "2.4.1"
     }
 }
