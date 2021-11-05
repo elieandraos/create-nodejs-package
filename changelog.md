@@ -1,4 +1,7 @@
 # Changelog
+## v1.0.2
+### Changed
+- :lipstick: prettified a number of the scaffolded package files
 
 ## v1.0.1
 ### Added
