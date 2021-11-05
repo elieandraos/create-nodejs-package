@@ -1,17 +1,12 @@
 # Installation
 
-Install the package globally.
-
 ```shell
+# Install the package globally.
 npm i -g @elieandraos/create-nodejs-package
-```
-
-# Usage
-
-The command will scaffold the package files, install and configure its dependencies.
-
-```shell
 create-nodejs-package
+
+# or (requires NPM6+)
+npm init @elieandraos/nodejs-package
 ```
 
 # The scaffolded package
