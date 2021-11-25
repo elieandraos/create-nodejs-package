@@ -2,6 +2,7 @@
 ## v1.0.2
 ### Changed
 - :lipstick: prettified a number of the scaffolded package files
+- :pencil2: fix typo in `.gitignore` file
 
 ## v1.0.1
 ### Added
