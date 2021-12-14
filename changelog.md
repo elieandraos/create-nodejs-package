@@ -1,4 +1,7 @@
 # Changelog
+## v1.0.4
+### Changed
+- :package: bump `@elieandraos/cli-tools` version
 
 ## v1.0.3
 ### Removed
