@@ -1,4 +1,13 @@
 # Changelog
+
+## v1.0.3
+### Removed
+- :fire: all files and dependencies related to the release script
+- :fire: removed microbundle dependency
+### Added
+- :green_heart: custom build script with esbuild
+- :rocket: import release script from `@elieandraos/cli-tools`
+
 ## v1.0.2
 ### Changed
 - :lipstick: prettified a number of the scaffolded package files
