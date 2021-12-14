@@ -26,7 +26,7 @@ You can customize both of them to your personal flavor.
 -   es-lint [configuration](https://eslint.org/docs/user-guide/configuring/) and [rules](https://eslint.org/docs/rules/) docs
 -   prettier [configuration](https://prettier.io/docs/en/configuration.html) and [options](https://prettier.io/docs/en/options.html) docs
 
-# Release automation
+#### Release automation
 
 > The automated release is shipped from the package es-lint [@elieandraos/cli-tools](https://github.com/elieandraos/cli-tools#release-automation)
 
