@@ -2,6 +2,7 @@
 ## v1.0.4
 ### Changed
 - :package: bump `@elieandraos/cli-tools` version
+- :bug: fix import path in release script
 
 ## v1.0.3
 ### Removed
