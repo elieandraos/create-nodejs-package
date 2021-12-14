@@ -23,7 +23,7 @@
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
         "format": "npx prettier --write .",
-        "release": "node -r esm src/release.js"
+        "release": "node -r esm scripts/release.js"
     },
     "repository": {
         "type": "git",
@@ -36,6 +36,7 @@
     },
     "homepage": "https://github.com/elieandraos/create-nodejs-package#readme",
     "dependencies": {
+        "@elieandraos/cli-tools": "^0.0.4",
         "@octokit/core": "^3.5.1",
         "chalk": "^4.1.2",
         "changelog-parser": "^2.8.0",

@@ -1,6 +1,5 @@
 import chalk from 'chalk'
-import { copy } from '../../utils/fileSystem'
-import { abortWithMessage, respondOk } from '../../utils/console'
+import { copy, abortWithMessage, respondOk } from '@elieandraos/cli-tools'
 
 const copyTemplate = async (packageInfo) => {
     try {

@@ -1,6 +1,6 @@
 import path from 'path'
 import inquirer from 'inquirer'
-import { dirExists } from '../../utils/fileSystem'
+import { exists } from '@elieandraos/cli-tools'
 import { isValidPackageName } from '../../utils/package'
 
 const askForPackageInfo = async () => {
@@ -27,7 +27,7 @@ const askForPackageInfo = async () => {
                 { name: 'Cancel', value: false },
             ],
             when: (answers) => {
-                return dirExists(answers.packageName)
+                return exists(answers.packageName)
             },
         },
     ]
