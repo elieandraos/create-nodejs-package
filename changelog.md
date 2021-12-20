@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.5
+### Changed
+- :package: bump outdated dependencies
+
 ## v1.0.4
 ### Changed
 - :package: bump `@elieandraos/cli-tools` version
