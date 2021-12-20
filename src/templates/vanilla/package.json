@@ -5,7 +5,7 @@
     "main": "dist/index.js",
     "scripts": {
         "info": "npm list -depth 0 && npm list -g --depth=0 && npm outdated || exit 0",
-        "build": "node scripts/build.js",
+        "build": "rm -rf dist && node scripts/build.js",
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
         "format": "npx prettier --write .",
@@ -13,7 +13,7 @@
     },
     "license": "ISC",
     "dependencies": {
-        "@elieandraos/cli-tools": "^0.0.5",
+        "@elieandraos/cli-tools": "^0.0.7",
         "chalk": "^4.1.2",
         "dotenv": "^10.0.0"
     },
@@ -23,6 +23,6 @@
         "eslint": "^8.0.1",
         "esm": "^3.2.25",
         "jest": "^27.2.5",
-        "prettier": "2.4.1"
+        "prettier": "^2.5.1"
     }
 }
