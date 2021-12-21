@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.6
+### Changed
+- :hammer: generated package build platform set to `browser`
+
 ## v1.0.5
 ### Changed
 - :package: bump outdated dependencies
