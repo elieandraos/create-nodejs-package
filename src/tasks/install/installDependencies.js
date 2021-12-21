@@ -1,15 +1,15 @@
 import { projectInstall } from 'pkg-install'
-import { respondOk, abortWithMessage } from '@elieandraos/cli-tools'
+import _ from '@elieandraos/cli-tools'
 
 const installDependencies = async (packageInfo) => {
     try {
-        await respondOk(`Installing package dependencies...`)
+        await _.respondOk(`Installing package dependencies...`)
 
         await projectInstall({
             cwd: packageInfo.root,
         })
     } catch (e) {
-        abortWithMessage(`Something wrong happened\n${e}`)
+        _.abortWithMessage(`Something wrong happened\n${e}`)
     }
 }
 

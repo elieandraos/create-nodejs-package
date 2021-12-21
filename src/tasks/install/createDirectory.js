@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { emptyDir, abortWithMessage } from '@elieandraos/cli-tools'
+import _ from '@elieandraos/cli-tools'
 
 const createDirectory = async (packageInfo) => {
     try {
@@ -11,10 +11,10 @@ const createDirectory = async (packageInfo) => {
         )
             fs.mkdirSync(packageInfo.root)
         else if (packageInfo.overwriteExistingDirectory === true)
-            emptyDir(packageInfo.root)
-        else abortWithMessage('Operation cancelled')
+            _.empty(packageInfo.root)
+        else _.abortWithMessage('Operation cancelled')
     } catch (e) {
-        abortWithMessage(`Something wrong happened\n${e}`)
+        _.abortWithMessage(`Something wrong happened\n${e}`)
     }
 }
 

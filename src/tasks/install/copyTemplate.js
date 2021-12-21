@@ -1,17 +1,17 @@
 import chalk from 'chalk'
-import { copy, abortWithMessage, respondOk } from '@elieandraos/cli-tools'
+import _ from '@elieandraos/cli-tools'
 
 const copyTemplate = async (packageInfo) => {
     try {
-        copy(packageInfo.templateDir, packageInfo.root)
+        _.copy(packageInfo.templateDir, packageInfo.root)
 
-        await respondOk(
+        await _.respondOk(
             `Scaffolded package files and directories in ${chalk.cyan(
                 packageInfo.root
             )}`
         )
     } catch (e) {
-        abortWithMessage(`Something wrong happened\n${e}`)
+        _.abortWithMessage(`Something wrong happened\n${e}`)
     }
 }
 

@@ -1,26 +1,25 @@
 import fs from 'fs'
 import path from 'path'
 import chalk from 'chalk'
+import _ from '@elieandraos/cli-tools'
 import { toValidPackageName } from '../../utils/package'
-import { respondOk, abortWithMessage } from '@elieandraos/cli-tools'
 
 const updatePackageJsonFile = async (packageInfo) => {
     try {
-        const pkg = require(path.join(packageInfo.root, `package.json`))
-        pkg.name = toValidPackageName(packageInfo.packageName)
+        let { packageName, root } = packageInfo
+        const pkg = require(path.join(root, `package.json`))
+        pkg.name = toValidPackageName(packageName)
 
         fs.writeFileSync(
             path.join(packageInfo.root, `package.json`),
             JSON.stringify(pkg, null, 2)
         )
 
-        await respondOk(
-            `Updated package.json name property to ${chalk.cyan(
-                packageInfo.packageName
-            )}`
+        await _.respondOk(
+            `Updated package.json name property to ${chalk.cyan(packageName)}`
         )
     } catch (e) {
-        abortWithMessage(`Something wrong happened\n${e}`)
+        _.abortWithMessage(`Something wrong happened\n${e}`)
     }
 }
 

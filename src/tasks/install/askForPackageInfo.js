@@ -1,6 +1,6 @@
 import path from 'path'
 import inquirer from 'inquirer'
-import { exists } from '@elieandraos/cli-tools'
+import _ from '@elieandraos/cli-tools'
 import { isValidPackageName } from '../../utils/package'
 
 const askForPackageInfo = async () => {
@@ -26,14 +26,15 @@ const askForPackageInfo = async () => {
                 { name: 'Overwrite', value: true },
                 { name: 'Cancel', value: false },
             ],
-            when: (answers) => {
-                return exists(answers.packageName)
+            when: ({ packageName }) => {
+                return _.exists(packageName)
             },
         },
     ]
 
     let answers = await inquirer.prompt(questions)
-    let root = path.join(process.cwd(), answers.packageName)
+    let { packageName } = answers
+    let root = path.join(process.cwd(), packageName)
     let template = 'vanilla'
     let templateDir = path.join(__dirname, `../../templates/${template}`)
 
