@@ -39,7 +39,7 @@ You can customize both of them to your personal flavor.
 
 #### Release automation
 
-> The automated release is shipped from the package es-lint [@elieandraos/cli-tools](https://github.com/elieandraos/cli-tools#release-automation)
+> The automated release is shipped from the package [@elieandraos/cli-tools](https://github.com/elieandraos/cli-tools#release-automation)
 
 ```shell
 npm run release
