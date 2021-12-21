@@ -1,4 +1,9 @@
 # Changelog
+# Changelog
+## v1.0.7
+### Changed
+- :alien: update install script due to `@elieandraos/cli-tools` updates
+
 ## v1.0.6
 ### Changed
 - :hammer: generated package build platform set to `browser`
