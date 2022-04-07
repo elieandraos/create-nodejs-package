@@ -1,17 +1,18 @@
-import fs from 'fs'
 import _ from '@elieandraos/cli-tools'
 
 const createDirectory = async (packageInfo) => {
     try {
+        let { root, overwriteExistingDirectory } = packageInfo
+
         if (
             !Object.prototype.hasOwnProperty.call(
                 packageInfo,
                 'overwriteExistingDirectory'
             )
         )
-            fs.mkdirSync(packageInfo.root)
-        else if (packageInfo.overwriteExistingDirectory === true)
-            _.empty(packageInfo.root)
+            _.createDirectory(packageInfo.root)
+        else if (overwriteExistingDirectory === true)
+            _.emptyDirectory(root)
         else _.abortWithMessage('Operation cancelled')
     } catch (e) {
         _.abortWithMessage(`Something wrong happened\n${e}`)

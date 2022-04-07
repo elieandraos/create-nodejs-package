@@ -1,16 +1,16 @@
 const isValidPackageName = (packageName) => {
-    return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(
-        packageName
-    )
+    return new RegExp('^[a-zA-Z0-9\\s]+$').test(packageName.toLowerCase())
 }
 
 const toValidPackageName = (packageName) => {
     return packageName
         .trim()
         .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/^[._]/, '')
-        .replace(/[^a-z0-9-~]+/g, '-')
 }
 
-export { isValidPackageName, toValidPackageName }
+const isValidPackageScope = (scope) => {
+    return scope.startsWith('@') &&
+        new RegExp('^[a-zA-Z0-9\\s]+$').test(scope.substr(1).toLowerCase())
+}
+
+export { isValidPackageName, toValidPackageName, isValidPackageScope }

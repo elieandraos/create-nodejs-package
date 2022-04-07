@@ -1,7 +1,7 @@
 import path from 'path'
 import inquirer from 'inquirer'
 import _ from '@elieandraos/cli-tools'
-import { isValidPackageName } from '../../utils/package'
+import {isValidPackageName, isValidPackageScope} from '../../utils/package'
 
 const askForPackageInfo = async () => {
     const questions = [
@@ -30,9 +30,21 @@ const askForPackageInfo = async () => {
                 return _.exists(packageName)
             },
         },
+        {
+            type: 'input',
+            name: 'packageScope',
+            prefix: '',
+            message: '\nEnter the package scope (optional):',
+            validate: (value) => {
+                return isValidPackageScope(value)
+                    ? true
+                    : 'Package scope must be alphanumeric and starts with "@"'
+            },
+        },
     ]
 
     let answers = await inquirer.prompt(questions)
+
     let { packageName } = answers
     let root = path.join(process.cwd(), packageName)
     let template = 'vanilla'

@@ -2,13 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import chalk from 'chalk'
 import _ from '@elieandraos/cli-tools'
-import { toValidPackageName } from '../../utils/package'
 
 const updatePackageJsonFile = async (packageInfo) => {
     try {
-        let { packageName, root } = packageInfo
+        let { packageName, packageScope, root } = packageInfo
         const pkg = require(path.join(root, `package.json`))
-        pkg.name = toValidPackageName(packageName)
+        pkg.name = packageScope ? `${packageScope}/${packageName}` : packageName
 
         fs.writeFileSync(
             path.join(packageInfo.root, `package.json`),
