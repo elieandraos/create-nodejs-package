@@ -1,8 +1,11 @@
 # Changelog
-# Changelog
+
 ## v1.0.7
 ### Changed
 - :alien: update install script due to `@elieandraos/cli-tools` updates
+- :green_heart: Build script supports both node and browser platforms
+- :zap: ask for package scope
+- :package: update package dependencies
 
 ## v1.0.6
 ### Changed
