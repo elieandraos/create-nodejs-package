@@ -6,6 +6,9 @@ import _ from '@elieandraos/cli-tools'
 const updatePackageJsonFile = async (packageInfo) => {
     try {
         let { packageName, packageScope, root } = packageInfo
+        packageName.trim().toLocaleLowerCase()
+        packageScope.trim().toLowerCase()
+
         const pkg = require(path.join(root, `package.json`))
         pkg.name = packageScope ? `${packageScope}/${packageName}` : packageName
 
