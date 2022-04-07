@@ -4,7 +4,7 @@ const { nodeExternalsPlugin } = require('esbuild-node-externals')
 // ESM module (ECMAScript)
 // Meant for "import" statements in (modern browsers and bundlers)
 esbuild.build({
-    entryPoints: ['src/clockwork.js'],
+    entryPoints: ['src/index.js'],
     outfile: 'dist/index.esm.js',
     bundle: true,
     minify: true,
@@ -26,7 +26,7 @@ esbuild.build({
 // CJS module (CommonJS)
 // Meant for "require" statements in (node)
 esbuild.build({
-    entryPoints: ['src/clockwork.js'],
+    entryPoints: ['src/index.js'],
     outfile: 'dist/index.cjs.js',
     bundle: true,
     minify: true,
