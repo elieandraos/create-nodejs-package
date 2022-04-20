@@ -1,4 +1,7 @@
 # Changelog
+## v1.0.8
+### Changed
+- :zap: async copy template files
 
 ## v1.0.7
 ### Changed
