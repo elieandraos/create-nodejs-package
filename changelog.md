@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.9
+### Changed
+- :bug: fix generated package entry points
+
 ## v1.0.8
 ### Changed
 - :zap: async copy template files
