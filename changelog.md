@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.11
+### Changed
+- :bug: update generated source file to default export
+
 ## v1.0.10
 ### Changed
 - :bug: generate `.gitignore` file into package
