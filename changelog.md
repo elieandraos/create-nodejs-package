@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.10
+### Changed
+- :bug: generate `.gitignore` file into package
+
 ## v1.0.9
 ### Changed
 - :bug: fix generated package entry points
