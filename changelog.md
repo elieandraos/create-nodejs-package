@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.12
+### Changed
+- :green_heart: update build cjs options
+
 ## v1.0.11
 ### Changed
 - :bug: update generated source file to default export
