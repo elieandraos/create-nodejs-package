@@ -14,7 +14,9 @@
         "release": "node -r esm scripts/release.js"
     },
     "license": "ISC",
-    "dependencies": {},
+    "dependencies": {
+
+    },
     "devDependencies": {
         "@babel/preset-env": "^7.16.5",
         "@elieandraos/cli-tools": "*",

@@ -9,6 +9,7 @@ esbuild.build({
     bundle: true,
     minify: true,
     format: 'esm',
+    platform: 'neutral',
     target: ['esnext'],
     plugins: [
         nodeExternalsPlugin({
@@ -30,6 +31,7 @@ esbuild.build({
     outfile: 'dist/index.cjs.js',
     bundle: true,
     minify: true,
+    format: 'esm',
     platform: 'node',
     target: ['node10.4'],
     plugins: [
