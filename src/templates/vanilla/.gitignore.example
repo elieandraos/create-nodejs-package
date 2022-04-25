@@ -5,9 +5,6 @@
 .idea
 .vscode
 
-# bundle files
-dist/
-
 # npm
 node_modules/
 

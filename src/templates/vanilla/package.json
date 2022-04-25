@@ -10,8 +10,8 @@
         "build": "rm -rf dist && node scripts/build.js",
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
-        "format": "npx prettier --write .",
-        "release": "node -r esm scripts/release.js"
+        "format": "npx prettier --write 'src/**/*.js' 'tests/**/*.js' 'scripts/**/*.js'",
+        "release": "npm run build && node -r esm scripts/release.js"
     },
     "license": "ISC",
     "dependencies": {
