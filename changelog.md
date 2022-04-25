@@ -1,4 +1,9 @@
 # Changelog
+## v1.0.14
+### Changed
+- :adhesive_bandage: version bundled file due to npm not building files when installing the package
+- :zap: bundle files with `npm build` before the running release script
+
 ## v1.0.13
 ### Changed
 - :green_heart: update build cjs options
