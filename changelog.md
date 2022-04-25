@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.13
+### Changed
+- :green_heart: update build cjs options
+
 ## v1.0.12
 ### Changed
 - :green_heart: update build cjs options
