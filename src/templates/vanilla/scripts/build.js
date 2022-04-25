@@ -31,7 +31,7 @@ esbuild.build({
     outfile: 'dist/index.cjs.js',
     bundle: true,
     minify: true,
-    format: 'esm',
+    format: 'cjs',
     platform: 'node',
     target: ['node10.4'],
     plugins: [
