@@ -11,7 +11,7 @@
         "test": "jest --verbose --coverage",
         "lint": "npx eslint src --fix",
         "format": "npx prettier --write 'src/**/*.js' 'tests/**/*.js' 'scripts/**/*.js'",
-        "release": "npm run build && node -r esm scripts/release.js"
+        "release": "node -r esm scripts/release.js"
     },
     "license": "ISC",
     "dependencies": {
