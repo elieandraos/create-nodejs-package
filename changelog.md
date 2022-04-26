@@ -1,4 +1,8 @@
 # Changelog
+## v1.0.15
+### Changed
+- :zap: bundle files silently before releasing
+
 ## v1.0.14
 ### Changed
 - :adhesive_bandage: version bundled file due to npm not building files when installing the package
